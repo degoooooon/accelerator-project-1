@@ -1,0 +1,262 @@
+.faq {
+  background-color: $primary-bg;
+
+  @media (max-width: $mobile-width) {
+    padding: 70px 0;
+  }
+}
+
+.faq__wrapper {
+  display: grid;
+  gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    gap: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: min-content 1fr;
+    gap: 40px;
+  }
+}
+
+.faq__inner {
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.faq__button {
+  width: 140px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: $base-black;
+  padding: 14px;
+  border: 1px solid $tab-border;
+  cursor: pointer;
+  background-color: transparent;
+
+  &--dark {
+    border: none;
+    background-image: $button-grad;
+    color: $base-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 17px;
+    width: 162px;
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 260px;
+    height: 54px;
+    padding: 19px 48px;
+  }
+
+  &:hover,
+  :focus {
+    border: 1px solid $base-black;
+  }
+
+  &:active {
+    color: $base-white;
+    background-image: $button-grad;
+  }
+}
+
+.faq__title {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 50px;
+  }
+}
+
+.faq__item {
+  position: relative;
+  border-bottom: 1px solid $divider;
+  padding: 20px 0;
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 22px 0 23px;
+  }
+
+  &:first-child {
+    border-top: 1px solid $divider;
+  }
+
+  p {
+    margin: 20px 0 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 125%;
+    color: $base-black;
+    width: 236px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 134%;
+      width: 540px;
+      margin: 10px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 23px 0 0;
+      width: 660px;
+    }
+  }
+
+  h3 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 20px;
+    line-height: 100%;
+    color: $base-black;
+    margin-right: auto;
+    width: 231px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 22px;
+      width: 489px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 24px;
+      width: auto;
+    }
+  }
+}
+
+.faq__buttons {
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid $secondary;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    min-width: 40px;
+    height: 40px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    top: 13px;
+    left: 7px;
+    width: 14px;
+    background-color: $secondary;
+
+    @media (min-width: $tablet-width) {
+      top: 18px;
+      left: 9px;
+      width: 20px;
+    }
+  }
+
+  &::after {
+    transform: rotate(-90deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $base-white;
+  }
+
+  &:focus-visible::before,
+  &:focus-visible::after {
+    background-color: $base-white;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .faq__item span::after {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+.faq__summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.subscription,
+.services,
+.rules {
+  display: none;
+}
+
+.faq__item .faq__summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq__item[open] summary::before {
+  transform: rotate(180deg);
+}
+
+.faq__item .faq__summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__summary[aria-expanded="false"] .faq__buttons::after {
+  transition: transform 1s;
+}
+
+.faq__summary[aria-expanded="true"] .faq__buttons::after {
+  transition: transform 0.8s;
+  transform: rotate(360deg);
+}
+
+.faq__summary[aria-expanded="false"] .faq__buttons--active::after {
+  transform: rotate(-90deg);
+  transition: transform 0.8s;
+}
+
+.faq__summary[aria-expanded="true"] .faq__buttons--active {
+  background-color: rgb(255, 255, 255);
+}
+
+.faq__summary[aria-expanded="true"] .faq__buttons {
+  background-color: $secondary;
+}
+
+.faq__summary[aria-expanded="false"] .faq__buttons {
+  background-color: $base-white;
+
+  &:hover {
+    background-color: $secondary;
+  }
+
+  &:focus-visible {
+    background-color: $divider;
+  }
+}
+
+.faq__summary[aria-expanded="true"] .faq__buttons::after,
+.faq__summary[aria-expanded="true"] .faq__buttons::before {
+  background-color: $base-white;
+}

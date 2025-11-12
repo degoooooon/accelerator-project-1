@@ -1,0 +1,12 @@
+.section {
+  padding: 40px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0;
+    position: relative;
+  }
+}

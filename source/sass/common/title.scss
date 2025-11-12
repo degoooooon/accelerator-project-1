@@ -1,0 +1,30 @@
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  margin: 0;
+  color: $base-black;
+  font-family: $alumni;
+  text-align: center;
+
+  &--reviews {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+
+    &--reviews {
+      font-size: 54px;
+      margin-bottom: 35px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+
+    &--reviews {
+      margin-bottom: 74px;
+    }
+  }
+}

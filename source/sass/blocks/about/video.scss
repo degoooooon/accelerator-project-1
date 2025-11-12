@@ -1,0 +1,156 @@
+.video img {
+  height: auto;
+  display: block;
+}
+
+.video__container {
+  position: relative;
+  padding-top: 53.25%;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: inherit;
+  }
+}
+
+.video__poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    top: -85px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 37%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 54%);
+    width: auto;
+  }
+}
+
+.video__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+
+  @media (min-width: $tablet-width) {
+    height: 170px;
+    border: 0;
+    top: -85px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 270px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 230px;
+    width: 360px;
+    top: 37%;
+    transform: translate(-50%, 54%);
+  }
+}
+
+.video__button {
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid $play-button;
+
+  &:hover {
+    border: 2px solid $base-black-opacity;
+  }
+
+  &:focus {
+    outline: 0;
+    border: 2px solid $border-play-color;
+  }
+
+  &:active {
+    border: 2px solid $base-black;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 100px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    mask-image: url("/__spritemap#sprite-play-view");
+    mask-repeat: no-repeat;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: $base-white;
+  }
+
+  &:hover::before {
+    background: $base-black-opacity;
+  }
+
+  &:active::before,
+  &:focus-visible::before {
+    background-color: $border-play-color;
+  }
+
+  &::after {
+    content: "";
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-image: $button-grad;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $desktop-width) {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  &:hover::after,
+  &:active::after {
+    background: $base-white;
+  }
+
+  &:focus-visible::after {
+    background: $border-play;
+  }
+}
+
+
+.video button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $desktop-width) {
+    transform: translate(-50%, 90%);
+  }
+}

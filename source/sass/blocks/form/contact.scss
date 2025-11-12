@@ -1,0 +1,126 @@
+.contact {
+  padding: 40px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+    flex: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top: 1px solid $divider;
+  }
+}
+
+.contact__title {
+  margin-bottom: 42px;
+  line-height: 75%;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    text-align: center;
+    line-height: 100%;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.contact__item {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: -4px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -2px;
+
+    &--chart {
+      order: 3;
+    }
+
+    &--email {
+      order: 4;
+    }
+  }
+}
+
+.contact__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__list {
+  display: grid;
+  color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 190px 190px;
+    row-gap: 15px;
+    column-gap: 60px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $divider;
+      width: 117px;
+      height: 2px;
+      bottom: 57px;
+      right: 161px;
+      transform: rotate(-90deg);
+
+      @media (min-width: $desktop-width) {
+        right: 180px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 180px 180px;
+    column-gap: 119px;
+    row-gap: 13px;
+  }
+}
+
+.contact__desctriptuon {
+  font-size: 20px;
+  line-height: 100%;
+  margin: 0 0 12px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    margin: 0 0 5px;
+  }
+}
+
+.contact__link {
+  color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    line-height: 157%;
+  }
+
+  &:hover:not(:focus-visible) {
+    color: $secondary-hover;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 0;
+    color: $secondary;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+    color: $base-black;
+  }
+
+  &:active:not(:focus-visible) {
+    color: $base-black;
+    border-bottom: 1px solid $base-black;
+  }
+}

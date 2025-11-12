@@ -1,0 +1,72 @@
+.hero {
+  background-image: $main-gradient;
+}
+
+.hero__nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 0;
+    align-items: center;
+  }
+}
+
+.hero__tel {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  font-size: 22px;
+  color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+  }
+
+  &:hover:not(:focus-visible) {
+    color: $secondary-hover;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 0;
+    color: $secondary;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+    color: $base-white;
+  }
+
+  &:active:not(:focus-visible) {
+    color: $base-black;
+    border-bottom: 1px solid $base-black;
+    margin-bottom: -1px;
+  }
+}
+
+.hero__img {
+  display: block;
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 130px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

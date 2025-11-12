@@ -1,0 +1,31 @@
+@import "vendor/normalize";
+@import "./vendor/swiper";
+
+/* GLOBAL */
+@import "common/font";
+@import "common/visually-hidden";
+@import "common/container";
+@import "common/button";
+@import "common/title";
+@import "common/section-padding";
+@import "common/list";
+@import "common/variables";
+
+/* BLOCKS */
+@import "blocks/page-body";
+@import "blocks/hero/hero";
+@import "blocks/hero/content";
+@import "blocks/about/about";
+@import "blocks/price/price";
+@import "blocks/price/tabs";
+@import "blocks/games";
+@import "blocks/juri";
+@import "blocks/features";
+@import "blocks/offers";
+@import "blocks/faq";
+@import "blocks/reviews";
+@import "blocks/form/free";
+@import "blocks/form/contact";
+@import "blocks/form/form";
+@import "blocks/footer";
+@import "blocks/about/video";

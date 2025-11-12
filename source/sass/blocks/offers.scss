@@ -1,0 +1,245 @@
+.offers__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.offers__inner {
+  background-color: $accent-bg;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.offers__inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 25px;
+    width: 278px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 45px;
+    width: 280px;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    margin-bottom: 9px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 26px;
+    }
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    margin-bottom: 28px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 70px;
+      margin-bottom: 40px;
+    }
+  }
+
+  p {
+    font-weight: 300;
+    margin: 0;
+    font-size: 16px;
+    line-height: 125%;
+    text-align: center;
+    margin-bottom: 28px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 133%;
+      margin-bottom: 160px;
+      text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 156px;
+    }
+  }
+}
+
+.offers__button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $divider;
+  color: $secondary;
+
+  &--dark {
+    color: $base-white;
+    border-bottom: 1px solid $base-white;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $secondary;
+    outline: 0;
+    padding: 10px;
+    margin: -8px;
+  }
+
+  &:focus:not(:focus-visible):not(.offers__button--dark) {
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid $secondary;
+    outline: 0;
+    padding: 0 0 5px;
+  }
+
+  &:active {
+    border-bottom: 1px solid $secondary;
+  }
+
+  &--dark:focus,
+  &--dark:focus-visible {
+    border: 1px solid $base-white;
+    outline: 0;
+
+    &:focus:not(:focus-visible) {
+      border: 0;
+      border-bottom: 1px solid $base-white;
+      margin: 0;
+      padding: 0 0 5px;
+    }
+  }
+}
+
+.offers__img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  background-image: linear-gradient(17deg, #ffffff 0%, #96c1e5 0.01%, #7086bd 39.11%, #3b80d5 100%);
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+  }
+}
+
+
+.offers__wrapper {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 1160px;
+    gap: 40px;
+  }
+}
+
+.offers__item {
+  padding: 7px;
+  background-image: linear-gradient(to right bottom, #d10a42, #00359f);
+}
+
+.offers__list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+
+.offers__container {
+  padding: 20px;
+  background-color: $base-white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: $secondary;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+  }
+
+  h3 {
+    margin: 0 0 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+
+    @media (min-width: $tablet-width) {
+      font-size: 26px;
+      margin: 0 0 10px;
+    }
+  }
+
+  p {
+    margin: 0 0 20px;
+    font-weight: 300;
+    line-height: 157%;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 150%;
+      width: 270px;
+      text-align: left;
+      margin: 0 0 30px;
+      min-height: 48px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 300px;
+      min-height: 34px;
+    }
+  }
+}

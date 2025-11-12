@@ -1,0 +1,38 @@
+@import "./variables";
+
+.container {
+  margin: 0 auto;
+  width: 290px;
+
+  &--reviews {
+    width: 240px;
+    position: relative;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+
+    &--free,
+    &--contact {
+      width: 440px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+
+    &--free {
+      width: 477px;
+      margin: 0 103px 0 auto;
+    }
+
+    &--contact {
+      width: 477px;
+      margin: 0 auto 0 103px;
+    }
+
+    &--reviews {
+      width: 768px;
+    }
+  }
+}

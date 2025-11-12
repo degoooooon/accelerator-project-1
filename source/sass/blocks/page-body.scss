@@ -1,0 +1,11 @@
+.page-body {
+  font-family: "Roboto Condensed", sans-serif;
+  min-width: 320px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 24px;
+  color: $base-white;
+  font-weight: 400;
+}
