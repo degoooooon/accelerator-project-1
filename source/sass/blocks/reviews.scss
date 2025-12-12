@@ -99,6 +99,11 @@
 
     &:hover {
       border: 1px solid $base-black;
+
+      &::before {
+        top: 8px;
+        left: 12px;
+      }
     }
 
     &:focus,

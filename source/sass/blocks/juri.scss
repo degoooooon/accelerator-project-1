@@ -78,6 +78,7 @@
     height: 50px;
     border-radius: 50px;
     z-index: 10;
+    cursor: pointer;
 
     &--next {
       transform: rotate(180deg);
@@ -99,6 +100,11 @@
 
     &:hover {
       border: 1px solid $base-black;
+
+      &::before {
+        top: 8px;
+        left: 12px;
+      }
     }
 
     &:focus,
