@@ -61,6 +61,11 @@
   &--active {
     color: $base-black;
     border-bottom: 2px solid $primaryopacity;
+    padding: 0 0 4px;
+
+    @media (min-width: $desktop-width) {
+      padding: 0 0 6px;
+    }
   }
 
   &::before {
@@ -76,6 +81,11 @@
   &:hover {
     color: rgba(16, 38, 84, 0.7);
     border-bottom: 2px solid $bk-color-1;
+    padding: 0 0 4px;
+
+    @media (min-width: $desktop-width) {
+      padding: 0 0 6px;
+    }
   }
 
   &:focus-visible {
